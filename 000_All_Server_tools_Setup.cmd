@@ -45,8 +45,6 @@ echo Starting 7-Zip Script %DATE% %TIME% >> %LOGFILE_AST%
 cd 005_7-Zip 
 call 005_Install_7-Zip.cmd %ENVIRONMENT%
 
-pause 
-
 :NotePad++
 CD /D %SCRIPT_LOCATION_AST%
 IF EXIST D:\_SW\001_All_Server_Tools\Logfiles\006_Notepad++.txt GOTO :Zabbix
@@ -75,8 +73,6 @@ echo Starting Dynatrace Script %DATE% %TIME% >> %LOGFILE_AST%
 cd 009_Dynatrace
 call 009_Install_Dynatrace.cmd %ENVIRONMENT% %SID% %INPUT_ACCEPTED%
 ECHO [96m
-
-pause 
 
 :Flexera
 CD /D %SCRIPT_LOCATION_AST%
@@ -118,8 +114,6 @@ echo Starting MySQL Connector Script %DATE% %TIME% >> %LOGFILE_AST%
 cd 014_MySQL_Connector_NET
 call 014_Install_MySQL.cmd %ENVIRONMENT%
 
-pause 
-
 :Ende
 CD /D %SCRIPT_LOCATION_AST%
 echo Finishing All Server Tools Setup %DATE% %TIME% >> %LOGFILE_AST%
@@ -134,4 +128,3 @@ REM echo Starting PROGRAMNAME Script %DATE% %TIME% >> %LOGFILE_AST%
 REM cd PROGRAMM INSTALLATIONSORDNER
 REM call PROGRAMM INSTALLATIONSSKRIPT.cmd
 REM ----------------------------------------------------------------------------------------------
-pause
